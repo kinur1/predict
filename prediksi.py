@@ -20,7 +20,7 @@ start_date = st.date_input("Select start date", pd.to_datetime('today') - pd.Dat
 end_date = st.date_input("Select end date", pd.to_datetime('today'))
 
 # Ambil input jumlah bulan ke depan dari pengguna menggunakan slider
-n_months_forecast = st.slider("Select the number of months for forecast", min_value=1, max_value=12, value=12)
+n_months_forecast = st.slider("Select the number of months for forecast", min_value=1, max_value=12, value=3)
 
 # Download data saham dari tanggal yang dipilih
 df = yf.download(stock_symbol, start=start_date, end=end_date)
