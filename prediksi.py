@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from plotly import graph_objs as go
 
 # Streamlit UI
-st.title('Stock Price Prediction with LSTM')
+st.title('Crypto Price Prediction with LSTM')
 # Ambil input simbol saham dari pengguna
 #stock_symbol = st.text_input("Enter stock symbol (e.g., AAPL):")
 symbol = ('ETH-USD', 'BTC-USD')
