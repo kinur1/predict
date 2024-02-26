@@ -13,7 +13,7 @@ from plotly import graph_objs as go
 st.title('Crypto Price Prediction with LSTM')
 # Ambil input simbol saham dari pengguna
 #stock_symbol = st.text_input("Enter stock symbol (e.g., AAPL):")
-symbol = ('ETH-USD', 'BTC-USD')
+symbol = ('ETH-USD', 'BTC-USD', 'ES=F', 'NQ=F', 'GC=F')
 stock_symbol = st.selectbox('Pilih dataset untuk prediksi', symbol)
 # Ambil input tanggal dari pengguna
 start_date = st.date_input("Select start date", pd.to_datetime('today') - pd.DateOffset(years=2))
