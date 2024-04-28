@@ -37,7 +37,7 @@ scaler = scaler.fit(y)
 y = scaler.transform(y)
 
 # Generate the input and output sequences
-n_lookback = 60
+n_lookback = 30
 n_forecast = n_months_forecast * 30  # Setiap bulan dianggap memiliki 30 hari perdagangan
 
 # Prepare dataset and use only Close price value
