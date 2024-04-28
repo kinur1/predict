@@ -44,7 +44,7 @@ n_forecast = n_months_forecast * 30  # Setiap bulan dianggap memiliki 30 hari pe
 dataset = df.filter(['Close']).values
 
 # Create len of percentage training set
-training_data_len = int(np.ceil((len(dataset) * 80) / 100))
+training_data_len = int(np.ceil((len(dataset) * 90) / 100))
 
 # Scale the dataset between 0 - 1
 scaler = MinMaxScaler(feature_range=(0, 1))
