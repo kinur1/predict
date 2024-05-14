@@ -16,11 +16,11 @@ st.title('Crypto Price Prediction with LSTM')
 symbol = ('ETH-USD', 'BTC-USD', 'ES=F', 'NQ=F', 'GC=F')
 stock_symbol = st.selectbox('Pilih dataset untuk prediksi', symbol)
 # Ambil input tanggal dari pengguna
-start_date = st.date_input("Select start date", pd.to_datetime('today') - pd.DateOffset(years=2))
+start_date = st.date_input("Select start date", pd.to_datetime('today') - pd.DateOffset(years=1))
 end_date = st.date_input("Select end date", pd.to_datetime('today'))
 
 # Ambil input jumlah bulan ke depan dari pengguna menggunakan slider
-n_months_forecast = st.slider("Select the number of months for forecast", min_value=1, max_value=12, value=3)
+n_months_forecast = st.slider("Select the number of months for forecast", min_value=1, max_value=6, value=3)
 
 # Download data saham dari tanggal yang dipilih
 df = yf.download(stock_symbol, start=start_date, end=end_date)
@@ -37,7 +37,7 @@ scaler = scaler.fit(y)
 y = scaler.transform(y)
 
 # Generate the input and output sequences
-n_lookback = 30
+n_lookback = 60
 n_forecast = n_months_forecast * 30  # Setiap bulan dianggap memiliki 30 hari perdagangan
 
 # Prepare dataset and use only Close price value
